@@ -7,9 +7,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;800&display=swap" rel="stylesheet">
 </head>
 <body>
-<h1>Hey</h1>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid at doloribus ea earum eveniet ex explicabo fuga impedit in iusto laborum libero natus odio possimus quasi ratione rem saepe, vitae!</p>
-<footer></footer>
+<div id="popup_overlay" class="popup_overlay">
+    <div class="popup">
+        <div class="popup_close" id="popup_close">X</div>
+        <p>оставьте ваш телефон <br> и нащ консультант свяжется с вами</p>
+        <form id="backPhone" name="backPhone">
+            <input type="Tel" name="telephone" id="telForm">
+            <button id="telButton" type="submit" form="backPhone">Заказать</button>
+        </form>
+    </div>
+</div>
+<div class="wrap">
+    <div class="karkas">
+        <h1 id="header">Объект</h1>
+        <button id="popupIn">Показать</button>
+    </div>
+</div>
 <script src="script.js"></script>
 </body>
 </html>
