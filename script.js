@@ -6,7 +6,6 @@
 // else {
 //     alert(false);
 // }
-
 // if(Array.isArray(arr2)) {
 //
 //     for(let i = 0;;)
@@ -72,7 +71,7 @@
 
 // function stringWork() {
 //     let str = document.getElementById('head').innerHTML;
-//     //////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
 //     //new String();
 //
 //
@@ -94,7 +93,7 @@
 //     // let result = Math.asin(-1);
 //
 //
-//     //////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
 //     document.getElementById('result').innerHTML = result;
 // }
 //
@@ -167,75 +166,210 @@
 //
 // window.setInterval();
 
+/////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////
+// window.onload = function () {
+//     let wrap = document.getElementById('popup_overlay');
+//
+//     let closeB = document.getElementById('popup_close');
+//     closeB.onclick = popupClose;
+//
+//     let inP = document.getElementById('popupIn');
+//     inP.onclick = popup;
+//
+//     let tIn, tOut;
+//
+//     function popup() {
+//         wrap.style.display = 'block';
+//         popupIn(1);
+//
+//     }
+//
+//     function popupClose() {
+//         popupOut(0);
+//     }
+//     function popupIn(x){
+//         let op = (wrap.style.opacity) ? parseFloat(wrap.style.opacity) : 0;
+//
+//         if(op < x) {
+//             clearInterval(tOut);
+//             op +=0.05;
+//             wrap.style.opacity = op;
+//             tIn = setTimeout(function () {
+//                 popupIn(x);
+//             },50, x)
+//         }
+//     }
+//
+//     function popupOut(x){
+//         let op = (wrap.style.opacity) ? parseFloat(wrap.style.opacity) : 0;
+//         clearInterval(tIn);
+//         if(op > x) {
+//             op -=0.05;
+//             wrap.style.opacity = op;
+//             tOut = setTimeout(function () {
+//                 popupOut(x);
+//             },100, x)
+//         }
+//         if(wrap.style.opacity == x){
+//             wrap.style.display = 'none';
+//         }
+//     }
+//     //setTimeout(popup, 3000);
+//     let h1 = document.getElementById('header');
+//     h1.onclick = function () {
+//         clearTimeout(intStop);
+//     }
+//
+//     function  changeColor() {
+//         if (h1.style.color == 'black') {
+//             h1.style.color = 'white'
+//         }
+//         else {
+//             h1.style.color = 'black'
+//         }
+//     }
+//     let intStop = setInterval(changeColor,500);
+//     let str, result;
+//     do {
+//          str = prompt('Your Stroke');
+//          result = confirm('Are you sure that ' + str + '?');
+//
+//     } while(!result)
+//
+//     alert(str);
+// }
+/////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////
 
-window.onload = function () {
-    let wrap = document.getElementById('popup_overlay');
+// window.onload = function () {
+//
+//     let openWindow = document.getElementById('openWindow');
+//     openWindow.onclick = function(){
+//
+//
+//         window.open(
+//             'main.html',
+//             'w1',
+//             "width=420,height=220,resizable=no,left=500,top=300,menubar=no,scrollbar=no");
+//
+//     };
+//     console.log(w1.opener)
+//     let closeWindow = document.getElementById('closeWindow');
+//     closeWindow.onclick = function () {
+//         if(typeof w1 == 'object'){
+//             w1.close();
+//         }
+//     }
+//     let myVar = 'Hello World';
+//     function getMyVar() {
+//         alert(myVar);
+//         w1.editMyVar();
+//     }
+//     function editMyVar() {
+//         return 50;
+//     }
+//     function getMyVar(){
+//         // alert(myVar);
+//         // w1.editMyVar();
+//         // alert(myVar)
+//
+//     }
+//
+//     let f = document.getElementById('function');
+//     f.onclick = function () {
+//         getMyVar();
+//     }
+//
+//
+// }
 
-    let closeB = document.getElementById('popup_close');
-    closeB.onclick = popupClose;
+/////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////
 
-    let inP = document.getElementById('popupIn');
-    inP.onclick = popup;
+// window.onload = function () {
+//     console.log(window.location);
+//
+//     function urlArgs() {
+//         let args = {};
+//
+//         let query = window.location.search.substring(1);
+//
+//         let parts = query.split("&");
+//
+//         for(let i = 0; i < parts.length; i++){
+//             let pos = parts[i]. indexOf('=');
+//             if (pos == -1){
+//                 continue
+//             }
+//             let name = parts[i].substring(0,pos);
+//
+//             let value = parts[i].substring(pos+1);
+//             args[name] = value;
+//         }
+//         return args;
+//     }
+//     let obj = urlArgs;
+//     console.log(args);
+//
+// }
 
-    let tIn, tOut;
+// let b = document.getElementById('openWindow');
+// b.onclick = function () {
+    // window.location.assign('https://www.google.com/');
+    // window.location.replace('https://www.google.com/');
+    // window.location.reload();
+    // window.location = 'https://www.google.com/';
 
-    function popup() {
-        wrap.style.display = 'block';
-        popupIn(1);
+    // console.log(history.length) // History - object
+    // history.back();
+    // history.go(1);
+    // console.log(window.navigator);
+// }
 
-    }
+/////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////
 
-    function popupClose() {
-        popupOut(0);
-    }
-    function popupIn(x){
-        let op = (wrap.style.opacity) ? parseFloat(wrap.style.opacity) : 0;
+// window.onload = function(){
+//     let elId = document.getElementById("karkas");
+//     function getElements() {
+//         var elem ={};
+//
+//         for (let i = 0; i < arguments.length; i++){
+//             let id = arguments[i];
+//
+//             let el = document.getElementById(id);
+//             if (el == null){
+//                 continue
+//             }
+//             elem[id] = el;
+//         };
+//         return elem;
+//     }
+//     let result = getElements('karkas', 'footer','openWindow');
+//     console.log(result);
+//     let eltag = document.getElementsByTagName();
+//     let elclass = document.getElementsByClassName();
+// }
 
-        if(op < x) {
-            clearInterval(tOut);
-            op +=0.05;
-            wrap.style.opacity = op;
-            tIn = setTimeout(function () {
-                popupIn(x);
-            },50, x)
-        }
-    }
+/////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////
 
-    function popupOut(x){
-        let op = (wrap.style.opacity) ? parseFloat(wrap.style.opacity) : 0;
-        clearInterval(tIn);
-        if(op > x) {
-            op -=0.05;
-            wrap.style.opacity = op;
-            tOut = setTimeout(function () {
-                popupOut(x);
-            },100, x)
-        }
-        if(wrap.style.opacity == x){
-            wrap.style.display = 'none';
-        }
-    }
-    //setTimeout(popup, 3000);
-    let h1 = document.getElementById('header');
-    h1.onclick = function () {
-        clearTimeout(intStop);
-    }
+// window.onload = function () {
+    // console.log(document.querySelectorAll('h1'));
+    // document.querySelectorAll('#openWindow').onclick = function () {
+    // let myDiv = document.querySelector('.wrap');
+    // console.log(myDiv.parentNode);
+    // console.log(myDiv.childNodes);
+    // console.log(myDiv.parentNode.firstChild.style.border = '2px solid red');
+    // console.log(myDiv.parentNode.lastChild.style.border = '2px solid red');
+    // myDiv.style.border = '2px solid red';
+    // myDiv.previousElementSibling.style.border = '2px solid red';
+    // console.log(myDiv.nextSibling.nextSibling.firstChild.firstChild.nodeValue = 'Hello World');
+    // console.log(myDiv.parentNode.childElementCount);
+    // }
+// }
 
-    function  changeColor() {
-        if (h1.style.color == 'black') {
-            h1.style.color = 'white'
-        }
-        else {
-            h1.style.color = 'black'
-        }
-    }
-    let intStop = setInterval(changeColor,500);
-    let str, result;
-    do {
-         str = prompt('Your Stroke');
-         result = confirm('Are you sure that ' + str + '?');
+/////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////
 
-    } while(!result)
-
-    alert(str);
-}
